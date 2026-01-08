@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="./public/output.css">
+
+</head>
+<body>
+    <nav class="fixed top-0 left-0 bg-blue-500 text-gray-200 py-4 px-2.5 
+     w-full flex justify-between items-center">
+     <h1 class="text-3xl font-bold">لیست کار های روزانه</h1>
+    <button id="addBtn" class="py-2 px-5 bg-white text-gray-400 rounded-md">اضافه کردن</button>
+    </nav>
+
+    <div id="con" class="w-full h-screen flex justify-center items-center">
+        <div class="w-9/12 mx-auto">
+            <form class="flex flex-col gap-2 border py-4 px-4 rounded-md">
+                <input id="todo" class="border w-full py-2.5 px-2 rounded-md" type="text" placeholder="امروز چه پلان دارید" >
+                <select id="order" class="py-2.5 w-full border rounded-md ">
+                    <option value="important">مهم</option>
+                    <option value="mediocre">متوسط</option>
+                    <option value="optional">اختیاری</option>
+                </select>
+                <button id="addTodo" class="py-2 px-5 bg-blue-500 rounded-md text-stone-200">ذخیره کردن</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
