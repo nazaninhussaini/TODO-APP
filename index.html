@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="./public/output.css">
 
 </head>
@@ -12,8 +12,10 @@
     <nav class="fixed top-0 left-0 bg-blue-500 text-gray-200 py-4 px-2.5 
      w-full flex justify-between items-center">
      <h1 class="text-3xl font-bold">لیست کار های روزانه</h1>
-    <button id="addBtn" class="py-2 px-5 bg-white text-gray-400 rounded-md">اضافه کردن</button>
+    <button id="addBtn" class="py-2 px-5 bg-white text-gray-300 rounded-md">اضافه کردن</button>
     </nav>
+    <div id="error" class="py-2 text-center bg-red-500 text-gray-200 text-2xl font-bold mt-18 "></div>
+
 
     <div id="con" class="w-full h-screen flex justify-center items-center">
         <div class="w-9/12 mx-auto border rounded-t-md">
@@ -32,5 +34,6 @@
 
         </div>
     </div>
+    <div id="todoContanier" class="w-full p-4 flex flex-col items-center myauto"></div>
 </body>
 </html>
