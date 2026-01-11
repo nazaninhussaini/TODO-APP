@@ -187,6 +187,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .mt-18 {
     margin-top: calc(var(--spacing) * 18);
   }
@@ -222,6 +228,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .rounded-md {
     border-radius: var(--radius-md);
@@ -297,6 +306,8 @@
 }
 @layer components {
   .todoCont {
+    display: flex;
+    gap: calc(var(--spacing) * 2);
     border-radius: var(--radius-md);
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -304,20 +315,20 @@
     padding-block: calc(var(--spacing) * 2);
   }
   .im {
-    height: calc(var(--spacing) * 18);
-    width: calc(var(--spacing) * 18);
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
     border-radius: calc(infinity * 1px);
     background-color: var(--color-red-500);
   }
   .normal {
-    height: calc(var(--spacing) * 18);
-    width: calc(var(--spacing) * 18);
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
     border-radius: calc(infinity * 1px);
     background-color: var(--color-yellow-500);
   }
   .optional {
-    height: calc(var(--spacing) * 18);
-    width: calc(var(--spacing) * 18);
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
     border-radius: calc(infinity * 1px);
     background-color: var(--color-green-500);
   }

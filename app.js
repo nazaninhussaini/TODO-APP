@@ -18,11 +18,13 @@ addBtn.addEventListener("click",()=>{
 })
 saveBtn.addEventListener("click",(event)=>{
     event.preventDefault();
+    contForm.innerHTML ="";
     saveTodo();
     todoList.map(todo =>{
         showTodo(todo);
     })
-    
+    contForm.classList.remove("flex");
+    contForm.classList.add("hidden");
     if(message.length>0){
         const h1 = document.createElement("h1");
         h1.textContent = message;
@@ -30,7 +32,12 @@ saveBtn.addEventListener("click",(event)=>{
     }
 })
 function saveTodo(){
+    if(!error.classList.contains("hidden")){
+         error.classList.add("hidden"); 
+    }
+  
     error.innerHTML = "";
+    const h1 =document.createElement("h1");
     const todo = document.getElementById("todo").value;
     const order = document.getElementById("order").value;
     if(todo!==""){
@@ -43,6 +50,7 @@ function saveTodo(){
     }
     todoList.push(saveTodo);
     message = "";
+
 }
 else{
     message = "لطفا یک لیست اضافه نموده و دوباره تلاش کنید.."
@@ -54,6 +62,11 @@ function showTodo(todo){
     const div = document.createElement("div");
     contForm.appendChild(div);
     div.classList.add("todoCont");
+    div.addEventListener("click",()=>{
+        todo.completed = !todo.completed
+        div.innerHTML = "";
+        showTodo(todo);
+    })
     const h1 = document.createElement("h1");
     h1.textContent = todo.myTodo;
     const circle = document.createElement("div");

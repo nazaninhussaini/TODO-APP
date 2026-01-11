@@ -1,15 +1,15 @@
 @import "tailwindcss";
 @layer components{
     .todoCont{
-        @apply py-2 px-5 border rounded-md;
+        @apply py-2 px-5 border rounded-md flex gap-2;
     }
     .im{
-        @apply h-18 w-18 rounded-full bg-red-500
+        @apply h-4 w-4 rounded-full bg-red-500
     }
      .normal{
-        @apply h-18 w-18 rounded-full bg-yellow-500
+        @apply h-4 w-4 rounded-full bg-yellow-500
     }
      .optional{
-        @apply h-18 w-18 rounded-full bg-green-500
+        @apply h-4 w-4 rounded-full bg-green-500
     }
 }
