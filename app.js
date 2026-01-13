@@ -18,9 +18,10 @@ addBtn.addEventListener("click",()=>{
 })
 saveBtn.addEventListener("click",(event)=>{
     event.preventDefault();
-    contForm.innerHTML ="";
+
     saveTodo();
-    todoList.map(todo =>{
+     contForm.innerHTML ="";
+    todoList.forEach(todo =>{
         showTodo(todo);
     })
     contForm.classList.remove("flex");
@@ -34,6 +35,7 @@ saveBtn.addEventListener("click",(event)=>{
 function saveTodo(){
     if(!error.classList.contains("hidden")){
          error.classList.add("hidden"); 
+         error.classList.remove("flex")
     }
   
     error.innerHTML = "";
@@ -44,8 +46,8 @@ function saveTodo(){
 
 
     const saveTodo = {
-        myTodo: todo,
-        importance: order,
+        myTodo:todo,
+        importance:order,
         completed :false
     }
     todoList.push(saveTodo);
