@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Todo</title>
+    <!-- <link rel="stylesheet" href="../public/output.css"> -->
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="cont" id="cont">
+        <nav>
+            <h1>Me Todo</h1>
+            <button id="addbtn" style="color:burlywood;">Add Todo</button>
+        </nav>
+        <div class="cont-model" id="cont-model">
+            <div class="model" >
+                <h1>Add Todo</h1>
+                <form action="">
+                    <input type="text" id="todo" placeholder="Write down your daily tasks">
+                    <select  id="importance">
+                        <option value="ipmortant">Ipmortant</option>
+                        <option value="normal">Normal</option>
+                        <option value="optional">Optional</option>
+                    </select>
+                    <button id="savebtn">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
